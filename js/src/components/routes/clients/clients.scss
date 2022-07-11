@@ -1,0 +1,90 @@
+/*
+	#	Clients
+	-------------------------------------------------------------------------------*/
+	#clients																		{ width: 100%; height:calc(100% - 64px);  top:64px; right:0px; left:0px; position:absolute; }
+	#clients::before																{ width: 100%; height: 32px; padding:12px;  right:0px; top:0px; left:0px; z-index:-1; position:absolute;  background-color:$color_liter;  display:block; content:'No clients match your search.'; opacity:0;  text-align:center; line-height:32px; font-size:16px;  transform:translateY(-100%);  transition:opacity .3s ease,  transform .3s ease;; }
+
+
+
+	#clients.active																	{  }
+	
+	
+	#clients.empty																	{  }
+	#clients.empty::before															{ z-index:1;  opacity:1;  transform:translateY(0px); }
+
+
+
+
+
+
+
+
+
+
+	/*	# Clients :: OL
+	-------------------------------------------------------------------------------*/
+	#clients ol																		{ max-width:1280px; height: 100%; margin:0px auto; padding:48px;  position:relative; overflow-y:auto;  overflow-y:overlay;  text-align:center; }
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
+	# Clients :: Mobile
+	-------------------------------------------------------------------------------*/
+	.mobile #clients																{  }
+	
+	
+	
+	
+	
+		/*	# Clients :: OL
+		---------------------------------------------------------------------------*/
+		.mobile #clients ol															{ padding:32px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	# Clients :: Mobile
+	-------------------------------------------------------------------------------*/
+	.phone #clients																	{  }
+	
+	
+	
+	
+	
+		/*	# Clients :: OL
+		---------------------------------------------------------------------------*/
+		.phone #clients ol															{ padding:24px; }
