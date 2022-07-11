@@ -8,7 +8,7 @@
 
 		/*  Team 
 		---------------------------------------------------------------------------*/ 
-		import { seek_default, clients_default } from '@data_static/clients.js';
+		import { client_default, clients_default,  seek_default } from '@data_static/clients.js';
 	
 	
 	
@@ -30,6 +30,12 @@
 		const seek																	=	reactive(Object.assign({},  seek_default));
 
 
+
+
+
+		/*	Client
+		---------------------------------------------------------------------------*/
+		const client																=	reactive(Object.assign({},  client_default));
 
 
 
@@ -297,11 +303,12 @@
 
 						member.fullname												=	member.name;
 
-						member.id													=	(`${member.name.replace(/ /g, '_')}-${member.title.replace(/ /g, '_')}`).toLowerCase();
-
 						member.name													=	member.fullname.split(' ')[0].replace(/(<([^>]+)>)/ig, '');
 
 						member.surname												=	member.fullname.split(' ')[1].replace(/(<([^>]+)>)/ig, '');
+
+
+						member.id													=	(`${member.surname.replace(/ /g, '_')}_${member.name.replace(/ /g, '_')}-${member.title.replace(/ /g, '_')}`).toLowerCase();
 
 
 
@@ -359,6 +366,8 @@
 	export {
 	
 	
+	
+		client,
 	
 		clients,
 

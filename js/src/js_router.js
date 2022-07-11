@@ -120,6 +120,9 @@
 				//	Active
 
 
+				app_store.active_header												=	(to.name != 'profile');
+
+
 				app_store.state														=	'active';
 
 

@@ -1,0 +1,137 @@
+/*
+	. Profile
+	-------------------------------------------------------------------------------*/
+	.profile																		{ max-width:50%; padding:24px 36px;  top:50%; left:50%; position:absolute;  background-color:#FFFFFF; border-radius:3px; box-shadow:0px 0px 3px 0px RGBA(0,0,0, .1);  display:block;  text-align:center;  transform:translate(-50%, -50%); }
+
+
+
+
+
+
+
+
+	/*	A
+	-------------------------------------------------------------------------------*/
+	.profile a																		{ width: 36px; height: 36px;  top:-18px; right:-18px; z-index:2; position:absolute;  background-color:$color_alpha; border-radius:100%; box-shadow:0px 0px 2px 0px RGBA(0,0,0, .4);  display:block;  transition:background-color .3s ease; }
+	.profile a::after																{ width:  2px; height: 24px;  top:6px; right:17px; z-index:2; position:absolute;  background-color:$color_litest;  display:block; content:'';  transform:rotate( 45deg); }
+	.profile a::before																{ width:  2px; height: 24px;  top:6px; right:17px; z-index:2; position:absolute;  background-color:$color_litest;  display:block; content:'';  transform:rotate(-45deg); }
+
+	.profile a:hover																{ background-color:$color_omega; }
+
+
+
+
+
+
+
+
+	/*	Blockquote
+	-------------------------------------------------------------------------------*/
+	.profile blockquote																{ margin-top:32px; padding:24px;  position:relative;  background-color:RGBA(0,0,0, .025); border-radius:9px;  display:inline-block; }
+	.profile blockquote::before														{ top:-24px; left:-24px; position:absolute;  display:inline-block; content:open-quote;  line-height:120px; font-family:Georgia, Serif; font-size:120px; color:$color_lite; }
+	
+	
+	
+	
+	
+		/*	Blockquote :: P
+		---------------------------------------------------------------------------*/
+		.profile blockquote	p														{ line-height:18px; font-size:16px; font-style:italic; font-weight:600; color:$color_darker; }
+
+
+
+
+
+
+
+
+	/*	H1
+	-------------------------------------------------------------------------------*/
+	.profile h1																		{ margin-top:16px;  line-height:32px; font-size:32px; font-weight:600;  color:$color_alpha;  transition:color .3s ease; }
+	
+	
+	
+	
+	
+	
+	
+	
+	/*	H2
+	-------------------------------------------------------------------------------*/
+	.profile h2																		{ margin-top:4px;  line-height:18px; }
+	
+	
+	
+
+	
+		/*	H3
+		---------------------------------------------------------------------------*/
+		.profile h2 em																{ display:inline-block; line-height:18px; font-size:18px; font-weight:400; color:$color_darker; }
+		.profile h2 em::before														{ content:', '; }
+	
+
+	
+	
+	
+		/*	H3
+		---------------------------------------------------------------------------*/
+		.profile h2 strong															{ display:inline-block; line-height:18px; font-size:18px; font-weight:400; color:$color_darker; }
+
+
+
+
+
+
+
+
+	/*	IMG
+	-------------------------------------------------------------------------------*/
+	.profile img																	{ max-height:128px;  display:inline-block; }
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
+	. Profile :: Mobile
+	-------------------------------------------------------------------------------*/
+	.mobile .profile																{  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+	. Profile :: Phone
+	-------------------------------------------------------------------------------*/
+	.phone .profile																	{  }

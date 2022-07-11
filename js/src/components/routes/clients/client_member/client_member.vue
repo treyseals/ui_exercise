@@ -95,7 +95,7 @@
 
 
 
-		<a :href="`/team/${cm.id}`"  title="cm_label"></a>
+		<router-link :to="`/clients/${cm.id}`"  title="cm_label"/>
 
 
 

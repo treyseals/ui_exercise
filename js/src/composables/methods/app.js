@@ -184,7 +184,7 @@
 	
 	
 	
-			if(app_store.active_header												&&	in_array(new_state,  ['loading'])){
+			if(app_store.active_header												&&	(new_state == 'loading')){
 	
 	
 	

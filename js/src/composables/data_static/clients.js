@@ -17,6 +17,41 @@
 
 
 
+		/*	Client Default
+		---------------------------------------------------------------------------*/
+		const client_default														=	{
+
+
+
+			avatar																	:	null,
+
+
+
+			id																		:	null,
+
+
+			fullname																:	null,
+
+			name																	:	null,
+
+			surname																	:	null,
+
+
+
+			nationality																:	null,
+
+			quote																	:	null,
+
+			title																	:	null
+
+
+
+		};
+
+
+
+
+
 		/*	Clients Default
 		---------------------------------------------------------------------------*/
 		const clients_default														=	{
@@ -90,6 +125,8 @@
 	export {
 	
 	
+	
+		client_default,
 	
 		clients_default,
 

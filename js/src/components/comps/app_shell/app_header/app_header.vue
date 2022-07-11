@@ -46,7 +46,7 @@
 			return	{
 
 
-				active																:	(seek.search !== null)
+				active																:	((seek.search !== null) && (seek.search !== ''))
 
 
 			};
@@ -68,7 +68,7 @@
 			return	{
 
 
-				active																:	app_store.active_header	
+				active																:	(app_store.active_header)
 
 
 			};

@@ -6,7 +6,16 @@
 
 	/*	Imports
 	-------------------------------------------------------------------------------*/
-	import { computed } from 'vue';
+	import { computed,  onBeforeMount } from 'vue';
+
+	import { useRoute, useRouter } from 'vue-router';
+
+
+
+
+		/*	Clients
+		---------------------------------------------------------------------------*/
+		import { load_clients,  client, clients } from '@methods/clients.js';
 
 
 
@@ -23,9 +32,11 @@
 	
 
 
-		/*	Props
+		/*	Route
 		---------------------------------------------------------------------------*/
-		const [ tm ]																=	defineProps(['tm']);
+		const route																	=	useRoute();
+
+		const router																=	useRouter();
 
 
 
@@ -42,13 +53,105 @@
 	
 
 
-		/*	Tm Title
+		/*	Client Member Title
 		---------------------------------------------------------------------------*/
-		const tm_title																=	computed(() => {
+		const cm_title																=	computed(() => {
 
 
 
-			return	`${tm.name}, ${tm.title}`;
+			return	`${client.name}, ${client.title}`;
+
+
+
+		});
+
+
+
+
+
+
+
+
+
+
+	/*	Life Cycle
+	-------------------------------------------------------------------------------*/
+	
+	
+
+
+		/*	Before Mount
+		---------------------------------------------------------------------------*/
+		onBeforeMount(async() => {
+
+
+
+			//	Init Route ?
+
+
+			if(!clients?.index?.length){
+
+
+
+				await load_clients();
+
+
+
+			}
+
+
+
+
+
+			let client_match														=	clients.index.find(client_item => client_item.id == route.params.profile_id);
+
+
+
+
+			if(route.params.profile_id												&&	client_match){
+
+
+
+
+
+				Object.assign(client,  Object.assign({}, client_match));
+
+
+
+
+				document.title														=	client.fullname;
+
+
+
+
+
+			} else {
+
+
+
+
+
+				Object.assign(client,  Object.assign({}, client_default));
+
+
+
+
+				router.push({ 
+
+
+
+					path 															:	'/clients'
+
+
+
+				});
+
+
+
+
+
+			}
+
 
 
 
@@ -81,33 +184,48 @@
 
 
 
-		<img :src="tm.avatar"  :title="tm_title"/>
+		<img :src="client.avatar"  :title="cm_title"/>
 
 
 
 
 
-		<h1 v-html="tm.fullname"></h1>
-
-
-		<h2 v-html="tm.title"></h2>
-
-
-		<h3 v-html="tm.nationality"></h3>
+		<h1 v-html="client.fullname"></h1>
 
 
 
+		<h2>
 
 
-		<blockquote v-if="tm.quote">
+			<strong v-html="client.title"></strong>
+
+			<em v-html="client.nationality"></em>
+
+
+		</h2>
 
 
 
-			<p v-html="tm.quote"></p>
+
+
+		<blockquote v-if="client.quote">
+
+
+
+			<p v-html="client.quote"></p>
 
 
 
 		</blockquote>
+
+
+
+
+
+
+
+
+		<router-link to="/clients"  title="Return to Clients"/>
 
 
 

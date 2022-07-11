@@ -41,30 +41,37 @@
 
 				name																:	'clients',
 	
-				path																:	'/clients',
-
-
-
-				children															:	[
-
-
-					{
-
-						component													:	() => import('@routes/profile/profile.vue'),
-
-						name														:	'profile',
-
-						path														:	':profile_id'
-
-					}
-
-
-
-				]
+				path																:	'/clients'
 	
 	
 	
 			},
+
+
+
+
+
+				/*	Clients :: Profile
+				-------------------------------------------------------------------*/
+				{
+	
+	
+	
+					component														:	() => import('@routes/profile/profile.vue'),
+
+					meta															:	{
+
+						title														:	'Jeff Seals UI Exercise | Client'
+
+					},
+
+					name															:	'profile',
+	
+					path															:	'/clients/:profile_id'
+
+	
+	
+				},
 	
 	
 	

@@ -70,7 +70,7 @@
 
 
 
-			return `${app_store.state} ${route.name} ${app_store.viewport.layout}`
+			return `${app_store.state} route_${route.name} ${app_store.viewport.layout}`
 	
 	
 	
@@ -120,7 +120,7 @@
 
 
 
-			<Transition name="bounce">
+			<Transition name="fade">
 
 
 
