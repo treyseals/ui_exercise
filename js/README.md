@@ -9,11 +9,9 @@
 
 ## Running
 
-- Run in the following order (**npm run dev** within the **js** directory)
+- Run in the following order (**npm run dev**)
 
 ```
-cd js
-
 npm run dev
 
 npm run test
