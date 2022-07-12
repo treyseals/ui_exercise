@@ -34,3 +34,5 @@ npm run test
 
 - Built in Nova (Mac-based IDE)
 - Uses tabbed (4-space width), no-wrap, 84-column guide
+- Vite-based
+- SFCs
