@@ -1,7 +1,36 @@
-# Vue 3 + Vite
+# JS UI Exercise
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- Fully-responsive (down to iPhone SE2020)
+- Full-object, dynamic search (including avatar attributes)
+- Features a quick layout toggle as well (card-vs-list style)
 
-## Recommended IDE Setup
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+
+
+## Running
+
+- Run in the following order (**npm run dev**)
+
+```
+npm run dev
+
+npm run test
+```
+
+
+
+
+## UX
+
+- Web application uses a fetch call to the clients.json file to populate client list. 
+
+- Clicking/tapping on a client opens the full client profile.
+
+
+
+## Coding Patterns/Style
+
+- Built in Nova (Mac-based IDE)
+- Uses tabbed (4-space width), no-wrap, 84-column guide
+- Vite-based
+- SFCs
