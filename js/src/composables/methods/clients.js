@@ -242,7 +242,7 @@
 
 		/*	Load Clients
 		---------------------------------------------------------------------------*/
-		const load_clients															=	(async () => {
+		const load_clients															=	(async (testing) => {
 
 
 
@@ -252,7 +252,7 @@
 
 
 
-				`/assets/clients.json`,
+				`${(testing ? 'http://localhost:3000' : '')}/assets/clients.json`,
 	
 	
 	
