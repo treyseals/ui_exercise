@@ -30,7 +30,7 @@ npm run test
 
 
 
-# Coding Patterns/Style
+## Coding Patterns/Style
 
 - Built in Nova (Mac-based IDE)
 - Uses tabbed (4-space width), no-wrap, 84-column guide
